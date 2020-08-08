@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
     public float FallingTime;
+    
     private TargetJoint2D Target;
     private BoxCollider2D BoxCollider;
 
@@ -24,18 +23,13 @@ public class FallingPlatform : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
             Invoke("Falling", FallingTime);
-        }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 9)
-        {
             Destroy(gameObject);
-        }
     }
 
     void Falling()

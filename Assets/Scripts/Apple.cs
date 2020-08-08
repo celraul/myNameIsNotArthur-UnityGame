@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
+    public GameObject collected;
+    public int Score;
+
     private SpriteRenderer sr;
     private CircleCollider2D circle;
-    public GameObject collected;
-
-    public int Score;
 
     // Start is called before the first frame update
     void Start()
