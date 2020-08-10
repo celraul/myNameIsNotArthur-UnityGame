@@ -25,7 +25,6 @@ public class Spike : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
-
     }
 
 }

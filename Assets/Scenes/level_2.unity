@@ -11421,6 +11421,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3420654356259111970, guid: b978e8d2a54d0204cbcdb8d79d2ae778,
+        type: 3}
+      propertyPath: FallingTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3420654356259111971, guid: b978e8d2a54d0204cbcdb8d79d2ae778,
         type: 3}
       propertyPath: m_Target.y
