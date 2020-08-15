@@ -37,4 +37,9 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(levelName);
     }
+
+    public void PlayNewGame(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 }

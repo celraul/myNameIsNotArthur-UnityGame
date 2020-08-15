@@ -31,15 +31,20 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * Speed;
+        //Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
 
-        if (Input.GetAxis("Horizontal") > 0)
+        // move o personagem em uma posição
+        //transform.position += movement * Time.deltaTime * Speed;
+        float movement = Input.GetAxis("Horizontal");
+
+        rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
+
+        if (movement > 0)
         {
             anim.SetBool("walk", true);
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (movement < 0)
         {
             anim.SetBool("walk", true);
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
